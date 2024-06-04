@@ -151,7 +151,7 @@ export default function Home() {
             Please wait while we fetch the data
           </span>
         </div>
-      ) : query!=="" && books.length === 0 ? (
+      ) : query!=="" && !books?.length ? (
         <div className="flex items-center justify-center w-full h-[400px]">
           <p className="text-2xl text-gray-200">No books found</p>
         </div>

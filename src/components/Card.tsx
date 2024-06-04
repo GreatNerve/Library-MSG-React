@@ -51,7 +51,7 @@ export default function Card({
                   {first_publish_year}
                 </p>
               </div>
-              <Button className="w-full text-sm md:text-base font-semibold mt-auto bg-blue-800 text-white hover:bg-blue-800/80" onClick={() => {
+              <Button className="w-full text-xs md:text-sm lg:text-base font-semibold mt-auto bg-blue-800 text-white hover:bg-blue-800/80" onClick={() => {
                 callfuntion && callfuntion({title, cover_i, ratings_average, author_name, first_publish_year});
               }}>
                 {btnText ? btnText : "Add to Bookshelf"}

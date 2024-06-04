@@ -35,7 +35,7 @@ export default function Bookself() {
       <h1 className="text-4xl font-bold text-center">Bookshelf</h1>
       {!loading && books.length > 0 && (
         <section className="w-full grid grid-cols-2 gap-4 p-4 md:grid-cols-3 lg:grid-cols-5">
-          {books.map((book:any) => (
+          {books && books.map((book:any) => (
             <Card
               key={`${book.cover_i!}-${book.title.replace(/\s/g, "")!}`}
               {...book}

@@ -151,13 +151,13 @@ export default function Home() {
             Please wait while we fetch the data
           </span>
         </div>
-      ) : query!=="" && !books?.length ? (
+      ) : query.trim() !== "" && books && books?.length === 0 ? (
         <div className="flex items-center justify-center w-full h-[400px]">
           <p className="text-2xl text-gray-200">No books found</p>
         </div>
       ) : (
         <section className="w-full grid grid-cols-2 gap-4 p-4 md:grid-cols-3 lg:grid-cols-5">
-          {books.map((book:any) => (
+          {books && books.length>0 && books.map((book:any) => (
             <Card key={`${book.cover_i}-${book.title.replace(/\s/g, "")}`} {...getUseFullData(book)} callfuntion={addTobookshelf} />
           ))}
         </section>

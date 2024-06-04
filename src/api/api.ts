@@ -1,8 +1,5 @@
 import axios from "axios";
 
-const api = axios.create({
-  baseURL: "/api",
-});
 
 export const getBooks = async ({
   query,
@@ -16,12 +13,12 @@ export const getBooks = async ({
   signal?: AbortSignal;
 }) => {
   try {
-    const response = await api.get(`?q=${query}&page=${page}&limit=${limit}`, {
-        signal,
-        });
+    const response = await axios.get(`https://openlibrary.org/search.json?q=${query}&page=${page}&limit=${limit}`, {
+      signal,
+    });
     return response.data;
   } catch (error) {
-    if(axios.isCancel(error)) {
+    if (axios.isCancel(error)) {
       throw new Error("Request cancelled");
     }
   }

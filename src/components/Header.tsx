@@ -5,9 +5,9 @@ export default function Header() {
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
-            <a className="block text-blue-600 dark:text-blue-300" href="#">
+            <Link to={"/"} className="block text-blue-600 dark:text-blue-300">
               <span className="text-2xl font-semibold">Books</span>
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center gap-12 font-bold">

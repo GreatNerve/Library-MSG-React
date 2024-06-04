@@ -28,7 +28,7 @@ const getUseFullData = (book) => {
     title,
     cover_i,
     ratings_average,
-    author_name: author_name[0],
+    author_name: author_name?.shift(),
     first_publish_year,
   };
 }
